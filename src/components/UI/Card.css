@@ -5,17 +5,17 @@
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
 h2.exp-calulator-name {
-    color: indigo;
-}
-.form-btn {
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #4c5016;
-    border: 1px solid white;
-    padding: 0.5rem;
+    font-size: 2rem;
+    width: fit-content;
+    margin-left: 150px;;
+    background: rgb(111, 180, 42);
+    color: rgb(61, 28, 85);
+    margin-block-end: auto;
+    padding: 0.5%;
+    border: 10px solid #6123a5;
     border-radius: 12px;
 }
+
 .app-edit-button{
     font-size: 1rem;
     font-weight: bold;
@@ -24,14 +24,4 @@ h2.exp-calulator-name {
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
-}
-.new-expense__controls{
-    color: rgb(165, 185, 46);
-    font-size: 1rem;
-    font-weight: bold;
-}
-.form-inner-date-module{
-    color: rgb(177, 138, 12);
-    font-size: 1rem;
-    font-weight: bold;
 }

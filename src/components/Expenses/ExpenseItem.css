@@ -1,6 +1,6 @@
 body {
   margin: 0 15px;
-  background-color: #b38b8b;
+  background-color: #af8787;
 }
 
 .expense-item {
@@ -35,7 +35,7 @@ body {
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  background-color: #40005d;
+  background-color: #3c1f49;
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;

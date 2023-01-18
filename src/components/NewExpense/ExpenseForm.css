@@ -12,3 +12,22 @@ form {
   align-content: stretch;
   justify-content: space-around;
 }
+.form-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #4c5016;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+.new-expense__controls{
+  color: rgb(165, 185, 46);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.form-inner-date-module{
+  color: rgb(177, 138, 12);
+  font-size: 1rem;
+  font-weight: bold;
+}
