@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "../UI/Card";
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, SetEnteredTitle] = useState("");
   const [enteredDate, SetEnteredDate] = useState("");
   const [enteredAmount, SetEnteredAmount] = useState("");
@@ -36,10 +36,10 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
-    console.log(expenseData);
-    SetEnteredAmount('');
-    SetEnteredDate('');
-    SetEnteredTitle('');
+    props.saveExpenseData(expenseData);
+    SetEnteredAmount("");
+    SetEnteredDate("");
+    SetEnteredTitle("");
   };
 
   return (
@@ -49,7 +49,11 @@ const ExpenseForm = () => {
           <div className="new-expense__controls">
             <div className="new-expense__control form-title">
               <label className="form-label-title">Title: </label>
-              <input type="text" value={enteredTitle} onChange={titleChangeHandler} />
+              <input
+                type="text"
+                value={enteredTitle}
+                onChange={titleChangeHandler}
+              />
             </div>
             <div className="new-expense__control form-amount">
               <label className="form-label-amount">Amount: </label>
