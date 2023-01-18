@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div>
-      <h2 className="calulator-name">Expense Calculator</h2>
+      <h2 className="exp-calulator-name">Expense Calculator</h2>
       <Expenses items={expenses} />
     </div>
   );
