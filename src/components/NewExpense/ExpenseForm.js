@@ -5,6 +5,9 @@ const ExpenseForm = () => {
   // const formHandler = () => {
     
   // };
+  const  AmountChangeHandler = () => {
+    console.log("Amount Changed!");
+  };
   const titleChangeHandler = () => {
     console.log("Title Changed!");
   };
@@ -14,11 +17,12 @@ const ExpenseForm = () => {
     <form>
       <div className="new-expense__controls">
         <div className="new-expense__control">
-          <label>Title</label>
+          <label>Title: </label>
           <input type="text" onChange={titleChangeHandler} />
         </div>
         <div className="new-expense__control">
-          <label>Amount</label>
+          <label>Amount: </label>
+          <input type="text" onChange={AmountChangeHandler} />
         </div>
       </div>
     </form>

@@ -1,8 +1,15 @@
 form {
-    padding: 1rem;
-    color: aliceblue;
-    background-color: rgb(75, 58, 58);
-    margin: 2rem auto;
-    width: 50rem;
-    max-width: 95%;
+  margin: 0 55px;
+  display: flex;
+  width: 18.5rem;
+  height: 7.5rem;
+  background-color: #2a2c26;
+  color: white;
+  border-radius: 27px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-around
 }
+
