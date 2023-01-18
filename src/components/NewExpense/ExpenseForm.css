@@ -1,5 +1,5 @@
 form {
-  margin: 0 17px;
+  margin: 31px 142px 38px 150px;
   display: flex;
   width: auto;
   height: 7.5rem;
@@ -12,6 +12,10 @@ form {
   align-content: stretch;
   justify-content: space-around;
 }
+.new-expense {
+  width: max-content;
+  margin: auto;
+}
 .form-btn {
   font-size: 1rem;
   font-weight: bold;
@@ -21,12 +25,12 @@ form {
   padding: 0.5rem;
   border-radius: 12px;
 }
-.new-expense__controls{
+.new-expense__controls {
   color: rgb(165, 185, 46);
   font-size: 1rem;
   font-weight: bold;
 }
-.form-inner-date-module{
+.form-inner-date-module {
   color: rgb(177, 138, 12);
   font-size: 1rem;
   font-weight: bold;

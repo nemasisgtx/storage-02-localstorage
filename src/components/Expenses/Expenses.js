@@ -1,12 +1,12 @@
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import "./Expenses.css";
-import ExpenseForm from "../NewExpense/ExpenseForm";
+// import ExpenseForm from "../NewExpense/ExpenseForm";
 
 function Expenses(props) {
   return (
     <Card className= " expenses">
-      <ExpenseForm></ExpenseForm>
+      {/* <ExpenseForm></ExpenseForm>  */ /*InBody attachment */}
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}

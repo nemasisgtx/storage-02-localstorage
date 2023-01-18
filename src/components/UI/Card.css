@@ -1,13 +1,14 @@
 .card {
     background-color: #1f271f;
     border-radius: 12px;
-    /* box-shadow: 0 2px 8px rgb(0 255 8 / 25); */
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 8px rgb(32 15 23);
+    width: auto;
 }
 h2.exp-calulator-name {
     font-size: 2rem;
     width: fit-content;
-    margin-left: 150px;;
+    margin-left: 150px;
+    margin-inline: auto;
     background: rgb(111, 180, 42);
     color: rgb(61, 28, 85);
     margin-block-end: auto;
