@@ -10,14 +10,14 @@ const ExpenseForm = () => {
   };
   return (
     <Card>
-    <div className=" new-expense__controls">
+    <div className="new-expense__controls">
     <form>
-      <div className=" new-expense__controls">
-        <div className=" new-expense__control">
+      <div className="new-expense__controls">
+        <div className="new-expense__control">
           <label>Title</label>
           <input type="text" onChange={titleChangeHandler} />
         </div>
-        <div className=" new-expense__control">
+        <div className="new-expense__control">
           <label>Amount</label>
         </div>
       </div>
