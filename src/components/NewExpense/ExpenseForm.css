@@ -1,7 +1,7 @@
 form {
-  margin: 0 55px;
+  margin: 0 17px;
   display: flex;
-  width: 18.5rem;
+  width: auto;
   height: 7.5rem;
   background-color: #2a2c26;
   color: white;
@@ -10,6 +10,5 @@ form {
   flex-direction: row;
   align-items: center;
   align-content: stretch;
-  justify-content: space-around
+  justify-content: space-around;
 }
-

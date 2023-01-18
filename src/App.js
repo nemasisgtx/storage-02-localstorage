@@ -26,7 +26,7 @@ function App() {
   ];
 
   return (
-    <div>
+    <div className="app-body">
       <h2 className="exp-calulator-name">Expense Calculator</h2>
       <Expenses items={expenses} />
     </div>

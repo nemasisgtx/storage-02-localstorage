@@ -3,3 +3,24 @@
     /* box-shadow: 0 2px 8px rgb(0 255 8 / 25); */
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
+h2.exp-calulator-name {
+    color: indigo;
+}
+.form-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #4c5016;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+.app-edit-button{
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #a84401;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
