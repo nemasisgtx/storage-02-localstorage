@@ -1,4 +1,5 @@
 .card {
+    background-color: #1f271f;
     border-radius: 12px;
     /* box-shadow: 0 2px 8px rgb(0 255 8 / 25); */
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
@@ -23,4 +24,14 @@ h2.exp-calulator-name {
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
+}
+.new-expense__controls{
+    color: rgb(165, 185, 46);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.form-inner-date-module{
+    color: rgb(177, 138, 12);
+    font-size: 1rem;
+    font-weight: bold;
 }
