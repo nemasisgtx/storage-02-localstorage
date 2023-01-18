@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="app-body">
       <h2 className="exp-calulator-name">Expense Calculator</h2>
-      <NewExpense onAddExpense={addExpenseHandler} />
+      {/* <NewExpense onAddExpense={addExpenseHandler} /> */}
       <Expenses items={expenses} />
     </div>
   );

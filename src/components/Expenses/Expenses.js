@@ -6,7 +6,7 @@ import ExpenseForm from "../NewExpense/ExpenseForm";
 function Expenses(props) {
   return (
     <Card className= " expenses">
-      {/* <ExpenseForm></ExpenseForm> */}
+      <ExpenseForm></ExpenseForm>
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}
