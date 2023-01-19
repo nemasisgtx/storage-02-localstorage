@@ -1,15 +1,11 @@
-import { useState } from "react";
-import Card from "../UI/Card";
-import "./ExpenseForm.css";
-import NewExpense from "./NewExpense";
+import { useState } from 'react';
+import Card from '../UI/Card';
+import './ExpenseForm.css';
 
 const ExpenseForm = (props) => {
-  const [enteredTitle, SetEnteredTitle] = useState("");
-  const [enteredDate, SetEnteredDate] = useState("");
-  const [enteredAmount, SetEnteredAmount] = useState("");
-  
-  const [ShowForm, setShowForm] = useState(false);
-
+  const [enteredTitle, SetEnteredTitle] = useState('');
+  const [enteredDate, SetEnteredDate] = useState('');
+  const [enteredAmount, SetEnteredAmount] = useState('');
 
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: '',
@@ -41,20 +37,14 @@ const ExpenseForm = (props) => {
       date: new Date(enteredDate),
     };
     props.onSaveExpenseData(expenseData);
-    SetEnteredAmount("");
-    SetEnteredDate("");
-    SetEnteredTitle("");
+    SetEnteredAmount('');
+    SetEnteredDate('');
+    SetEnteredTitle('');
   };
 
   const addExpenseHandler = (event) => {
-    event.preventDefault();
-    console.log("Added!");
-  };
-  const cancelExpenseHandler = (event) => {
-    event.preventDefault();
-    setShowForm(true)
-    console.log("Cancelled.");
-    
+    // event.preventDefault();
+    console.log('Added!');
   };
 
   return (
@@ -91,10 +81,18 @@ const ExpenseForm = (props) => {
                 onChange={dateChangeHandler}
               />
             </div>
-            <button onClick={addExpenseHandler} className="add-form preForm-btn">
+            <button
+              type="submit"
+              onClick={addExpenseHandler}
+              className="add-form preForm-btn"
+            >
               Add Expense
             </button>
-            <button onClick={cancelExpenseHandler} className="cancel-form preForm-btn">
+            <button
+              type="button"
+              onClick={props.onCancel}
+              className="cancel-form preForm-btn"
+            >
               Cancel
             </button>
           </div>

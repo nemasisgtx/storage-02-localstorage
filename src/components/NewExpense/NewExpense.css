@@ -9,3 +9,11 @@
   width: max-content;
   margin: auto;
 }
+.top-modal-btn{
+  color: rgb(165, 185, 46);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 25px 25px 0px 65px;
+  width: max-content;
+  margin: auto;
+}
