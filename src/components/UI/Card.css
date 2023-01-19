@@ -1,7 +1,7 @@
 .card {
-  background-color: #1f271f;
+  background-color: rgb(56, 42, 42);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgb(32 15 23);
+  box-shadow: 0 2px 8px rgb(41, 25, 33);
   width: auto;
 }
 
@@ -11,7 +11,8 @@ h2.exp-calc-name {
   margin-left: 150px;
   margin-inline: auto;
   background: rgb(201 201 201);
-  color: rgb(213 75 43);
+  background-color: rgb(61, 50, 50);
+  color: rgb(168, 90, 73);
   margin-block-end: auto;
   padding: 0.5%;
   border: 6px solid #b5b5b5;

@@ -2,8 +2,8 @@ form {
   margin: 31px 142px 38px 150px;
   display: flex;
   width: auto;
-  height: 7.5rem;
-  background-color: #2a2c26;
+  height: 13.5rem;
+  background-color: rgb(61, 50, 50);
   color: white;
   border-radius: 27px;
   flex-wrap: wrap;
@@ -12,23 +12,32 @@ form {
   align-content: stretch;
   justify-content: space-around;
 }
-.new-expense {
-  width: max-content;
-  margin: auto;
+.form-title{
+  margin: 0px 0px 20px -30px;
 }
+.form-amount{
+  margin: 0px 0px 20px -30px;
+}
+.form-date{
+  margin: 0px 0px 20px -30px;
+}
+
 /* .new-expense__control label {
+  margin: 1px 1px 1px 1px;
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
-}
+} */
 .form-label-title input {
+  margin: 1px 1px 3px 1px;
   font: inherit;
   padding: 0.5rem;
-  border-radius: 6px;
+  border-radius: 1px;
   border: 1px solid #ccc;
-  width: 20rem;
+  width: 0rem;
   max-width: 100%;
-} */
+}
+
 .top-modal-btn{
   display: flex;
   align-items: center;
@@ -40,20 +49,24 @@ form {
   padding: 0.5rem;
   border-radius: 12px;
 }
+.cancel-form{
+  margin: 0px -1px 20px 170px;
+}
+button.add-form{
+  margin: 0px -36px -30px 0px;
+  
+}
 .preForm-btn {
   font-size: 1rem;
+  width: auto;
   font-weight: bold;
   color: white;
-  background-color: #4c5016;
+  background-color: #582e4c;
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
 }
-.new-expense__controls {
-  color: rgb(165, 185, 46);
-  font-size: 1rem;
-  font-weight: bold;
-}
+
 .form-inner-date-module {
   color: rgb(177, 138, 12);
   font-size: 1rem;

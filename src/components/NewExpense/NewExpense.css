@@ -1,0 +1,11 @@
+.new-expense__controls {
+  color: rgb(165, 185, 46);
+  font-size: 1rem;
+  font-weight: bold;
+  width: 490px;
+  padding: 25px 25px 0px 65px;
+}
+.new-expense {
+  width: max-content;
+  margin: auto;
+}
