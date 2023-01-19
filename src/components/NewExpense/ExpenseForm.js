@@ -41,10 +41,27 @@ const ExpenseForm = (props) => {
     SetEnteredDate('');
     SetEnteredTitle('');
   };
-
-  const addExpenseHandler = (event) => {
+ let someArray = [
+  {
+    name: "Jesse",
+    age: 21,
+    height: "1.90cm"
+  },
+  {
+    name: "Tom",
+    age: 25,
+    height: "1.67cm"
+  },
+  {
+    name: "Anna",
+    age: 34,
+    height: "1.59cm"
+  }
+];
+  const addExpenseHandler = (jenkin) => {
     // event.preventDefault();
-    console.log('Added!');
+    const modifiedArray = someArray.map((credentials) => <h2>{credentials.name}</h2>)
+    console.log(modifiedArray);
   };
 
   return (
