@@ -4,7 +4,7 @@
 .expense-date {
   margin: 0 6px;
   display: flex;
-  width: 14.5rem;
+  width: auto;
   height: 5.5rem;
   border: 1px solid #ececec;
   background-color: #2a2c26;

@@ -1,28 +1,29 @@
 .card {
-    background-color: #1f271f;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgb(32 15 23);
-    width: auto;
-}
-h2.exp-calulator-name {
-    font-size: 2rem;
-    width: fit-content;
-    margin-left: 150px;
-    margin-inline: auto;
-    background: rgb(111, 180, 42);
-    color: rgb(61, 28, 85);
-    margin-block-end: auto;
-    padding: 0.5%;
-    border: 10px solid #6123a5;
-    border-radius: 12px;
+  background-color: #1f271f;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgb(32 15 23);
+  width: auto;
 }
 
-.app-edit-button{
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #a84401;
-    border: 1px solid white;
-    padding: 0.5rem;
-    border-radius: 12px;
+h2.exp-calc-name {
+  font-size: 2rem;
+  width: fit-content;
+  margin-left: 150px;
+  margin-inline: auto;
+  background: rgb(201 201 201);
+  color: rgb(213 75 43);
+  margin-block-end: auto;
+  padding: 0.5%;
+  border: 6px solid #b5b5b5;
+  border-radius: 12px;
+}
+
+.app-edit-button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #a84401;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
 }

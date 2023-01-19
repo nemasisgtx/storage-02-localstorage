@@ -29,7 +29,18 @@ form {
   width: 20rem;
   max-width: 100%;
 } */
-.form-btn {
+.top-modal-btn{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #d8b806;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+.preForm-btn {
   font-size: 1rem;
   font-weight: bold;
   color: white;
