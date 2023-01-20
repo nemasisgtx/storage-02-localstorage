@@ -5,14 +5,15 @@
   width: auto;
 }
 
-h2.exp-calc-name {
+.exp-calc-name {
   font-size: 2rem;
+  width: -moz-fit-content;
   width: fit-content;
   margin-left: 150px;
   margin-inline: auto;
   background: rgb(201 201 201);
-  background-color: rgb(61, 50, 50);
-  color: rgb(168, 90, 73);
+  background-color: rgb(137 137 137);
+  color: rgb(0 255 255);
   margin-block-end: auto;
   padding: 0.5%;
   border: 6px solid #b5b5b5;
