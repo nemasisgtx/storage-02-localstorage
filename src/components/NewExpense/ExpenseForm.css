@@ -39,13 +39,14 @@ form {
 }
 
 .top-modal-btn{
+  margin: 30px 2px 2px 2px;
   display: flex;
   align-items: center;
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  background-color: #d8b806;
-  border: 1px solid white;
+  background-color: #ce9907;
+  border: 1px solid rgb(209, 59, 59);
   padding: 0.5rem;
   border-radius: 12px;
 }

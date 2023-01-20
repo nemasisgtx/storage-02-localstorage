@@ -58,11 +58,11 @@ const ExpenseForm = (props) => {
     height: "1.59cm"
   }
 ];
-  const addExpenseHandler = (jenkin) => {
-    // event.preventDefault();
-    const modifiedArray = someArray.map((credentials) => <h2>{credentials.name}</h2>)
-    console.log(modifiedArray);
-  };
+const addExpenseHandler = (jenkin) => {
+  // event.preventDefault();
+  const modifiedArray = someArray.map((credentials) => <h2>{credentials.name}</h2>)
+  console.log(modifiedArray);
+};
 
   return (
     <Card>
