@@ -2,13 +2,13 @@ import classes from './Button.module.css';
 
 const Buttons = (props) => {
   return (
-    <div
+    <button
       className={classes.button}
       type={props.type || 'button'}
       onClick={props.onClick}
     >
       {props.children}
-    </div>
+    </button>
   );
 };
 export default Buttons;

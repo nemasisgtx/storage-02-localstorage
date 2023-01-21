@@ -5,16 +5,20 @@ import Card from '../UI/Card';
 import classes from './AddUser.module.css';
 
 const AddUser = (props) => {
+
   const [enteredUsername, setEnteredUsername] = useState('');
   const [enteredAge, setEnteredAge] = useState('');
 
   const addUsernameHandler = (event) => {
     setEnteredUsername(event.target.value);
   };
+
   const addAgeHandler = (event) => {
     setEnteredAge(event.target.value);
   };
+
   const addUserHandler = (event) => {
+    console.log(event);
     event.preventDefault();
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
       return;
@@ -22,13 +26,17 @@ const AddUser = (props) => {
     if (+enteredAge < 1) {
       return;
     }
+    props.onAddUser(enteredUsername, enteredAge);
+    setEnteredUsername('Please Enter');
+    setEnteredAge('');
   };
-  console.log(enteredUsername, enteredAge);
-  setEnteredUsername('');
-  setEnteredAge('');
+
+  //props.onAddUser(enteredUsername, enteredAge);
+  
+
   return (
     <Card className={classes.input}>
-      <form onSubmit={addUserHandler}>
+      <form onSubmit={ addUserHandler}>
         <label htmlFor="username">Username</label>
         <input
           onChange={addUsernameHandler}
@@ -48,4 +56,5 @@ const AddUser = (props) => {
     </Card>
   );
 };
+
 export default AddUser;
