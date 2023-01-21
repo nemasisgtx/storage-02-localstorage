@@ -4,8 +4,12 @@
 
 html {
   font-family: sans-serif;
+  background: black;
 }
-
+h1{
+  background: #00FF00;
+  color: white;
+}
 body {
   margin: 0;
 }
