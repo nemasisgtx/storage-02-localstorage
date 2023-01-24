@@ -1,9 +1,18 @@
 import React from 'react';
+import { useEffect } from 'react';
 
 import classes from './Navigation.module.css';
 
 const Navigation = (props) => {
+
+  // let [count,setCount] = useEffect(() => {
+  //   console.log('Effect');
+  //   return () => {
+  //     console.log('Cleanup');
+  //   };
+  // }, [count]);
   return (
+<React.Fragment>
     <nav className={classes.nav}>
       <ul>
         {props.isLoggedIn && (
@@ -23,6 +32,7 @@ const Navigation = (props) => {
         )}
       </ul>
     </nav>
+    </React.Fragment>
   );
 };
 
