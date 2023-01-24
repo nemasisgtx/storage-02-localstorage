@@ -1,15 +1,16 @@
 import React from 'react';
+import { useEffect } from 'react';
 
 import classes from './Navigation.module.css';
 
 const Navigation = (props) => {
 
-  let [count,setCount] = useEffect(() => {
-    effect
-    return () => {
-      cleanup
-    };
-  }, [input]);
+  // let [count,setCount] = useEffect(() => {
+  //   console.log('Effect');
+  //   return () => {
+  //     console.log('Cleanup');
+  //   };
+  // }, [count]);
   return (
 <React.Fragment>
     <nav className={classes.nav}>
@@ -31,9 +32,6 @@ const Navigation = (props) => {
         )}
       </ul>
     </nav>
-<body>
-  <button></button>
-</body>
     </React.Fragment>
   );
 };
