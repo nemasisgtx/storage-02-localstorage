@@ -25,7 +25,7 @@ const Login = (props) => {
       setFormIsValid(
         enteredEmail.includes('@') && enteredPassword.trim().length > 6
       );
-    }, 500);
+    }, 2000);
 
     return () => {
       console.log('CLEANUP');
