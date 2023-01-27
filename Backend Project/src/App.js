@@ -1,8 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 
-import MoviesList from './components/MoviesList';
-import './App.css';
+import MoviesList from "./components/MoviesList";
+import "./App.css";
 
 function App() {
   // const dummyMovies = [
@@ -20,23 +20,38 @@ function App() {
   //   },
   // ];
 
-    const [movies,setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
+  async function fetchMoviesHandler() {
+    const response = await fetch("https://swapi.dev/api/films");
+    const data = await response.json();
 
-  const fetchMoviesHandler = () => {
-    fetch('https://swapi.dev/api/films').then((response) => {
-      return response.json();
-  }).then((data) => {
-    const transformedMovies = data.results.map((movies) =>{
+    const transformedMovies = data.results.map((movies) => {
       return {
         id: movies.episode_id,
         title: movies.title,
         openingText: movies.opening_crawl,
         releaseDate: movies.release_date,
       };
-      });
-      setMovies(transformedMovies);
-    })
-  };
+    });
+  }
+
+  // const fetchMoviesHandler = () => {
+  //   fetch("https://swapi.dev/api/films")
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       const transformedMovies = data.results.map((movies) => {
+  //         return {
+  //           id: movies.episode_id,
+  //           title: movies.title,
+  //           openingText: movies.opening_crawl,
+  //           releaseDate: movies.release_date,
+  //         };
+  //       });
+  //       setMovies(transformedMovies);
+  //     });
+  // };
 
   return (
     <React.Fragment>
