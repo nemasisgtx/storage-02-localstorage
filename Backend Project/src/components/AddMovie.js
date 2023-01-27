@@ -20,7 +20,9 @@ function AddMovie(props) {
 
     props.onAddMovie(movie);
   }
-
+const onClickHandler =() => {
+  
+}
   return (
     <form onSubmit={submitHandler}>
       <div className={classes.control}>
@@ -35,7 +37,7 @@ function AddMovie(props) {
         <label htmlFor='date'>Release Date</label>
         <input type='text' id='date' ref={releaseDateRef} />
       </div>
-      <button>Add Movie</button>
+      <button onClick={onClickHandler}>Add Movie</button>
     </form>
   );
 }
