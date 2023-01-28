@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import cartContext from '../../Store/cart-context';
 
 const Cart = (props) => {
+  const cartItems = [{ id: "c1", name: "Sushi", amount: 2, price: 12.99 }].map(
   const cartCtx = useContext(cartContext);
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItem = cartCtx.items.length > 0;
@@ -27,7 +28,10 @@ const Cart = (props) => {
         <span>35.62</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']} onClick={props.onClose}>
+        <button className={classes["button--alt"]} onClick={props.onClose}>
+          Checkout
+        </button>
+        <button className={classes["button--alt"]} onClick={props.onClose}>
           Close
         </button>
       </div>
