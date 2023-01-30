@@ -25,3 +25,10 @@
 .counter button{
   margin: 1rem;
 }
+.counter input{
+  margin: 0;
+  font-weight: bold;
+  width: 9rem;
+  border-radius: 12px;
+  padding: 1rem;
+}
