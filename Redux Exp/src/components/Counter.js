@@ -6,7 +6,7 @@ const Counter = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter);
   const show = useSelector((state) => state.showCounter);
-  const [inputAmount, setInputAmount] = useState(0);
+  const [inputAmount, setInputAmount] = useState('');
 
   const incrementCounterHandler = () => {
     dispatch({ type: "INCREMENT" });
@@ -15,6 +15,7 @@ const Counter = () => {
   const decrementCounterHandler = () => {
     dispatch({ type: "DECREMENT" });
   };
+
   const increaseCounterHandler = () => {
     dispatch({ type: "INCREASE", amount: inputAmount });
   };
@@ -22,8 +23,13 @@ const Counter = () => {
   const increaseInputHandler = (event) => {
     setInputAmount(event.target.value);
   };
+
   const toggleCounterHandler = () => {
     dispatch({ type: "TOGGLE" });
+  };
+
+  const resetCounterHandler = () => {
+    dispatch({ type: "RESET" });
   };
 
   return (
@@ -39,6 +45,7 @@ const Counter = () => {
         </div>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
+      <button onClick={resetCounterHandler}>Reset Counter</button>
     </main>
   );
 };
