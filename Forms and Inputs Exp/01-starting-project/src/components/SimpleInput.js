@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import useInput from "../hooks/name-use-input";
+import useInput from "../hooks/use-input";
 import EmailInputHook from "../hooks/email-use-input";
 
 const SimpleInput = (props) => {
