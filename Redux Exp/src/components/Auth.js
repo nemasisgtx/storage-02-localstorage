@@ -15,6 +15,7 @@ const [password, setPassword] = useState("");
   const formSubmitHandler = (e) => {
     e.preventDefault();
     console.log('form submitted');
+    console.log(email, password);
     setEmail('');
     setPassword('');
   };
