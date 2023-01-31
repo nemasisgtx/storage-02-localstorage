@@ -12,10 +12,10 @@ const counterReducer = (state = initialState, action) => {
     case 'TOGGLE':
       return { counter: counterState, showCounter: !state.showCounter };
     case 'RESET':
-      return { counter: counterState = 0 , showCounter: state.showCounter };
+      return { counter: counterState = initialState.counter , showCounter: state.showCounter };
     case 'INCREASE':
       return {
-        counter: state.counter + action.amount,
+        counter : counterState + parseInt(action.amount),
         showCounter: state.showCounter,
       };
     default:

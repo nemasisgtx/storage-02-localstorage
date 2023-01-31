@@ -6,7 +6,7 @@ const Counter = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter);
   const show = useSelector((state) => state.showCounter);
-  const [inputAmount, setInputAmount] = useState('');
+  const [inputAmount, setInputAmount] = useState(0);
 
   const incrementCounterHandler = () => {
     dispatch({ type: "INCREMENT" });
@@ -21,7 +21,8 @@ const Counter = () => {
   };
 
   const increaseInputHandler = (event) => {
-    setInputAmount(event.target.value);
+    const value = event.target.value;
+    setInputAmount(value);
   };
 
   const toggleCounterHandler = () => {
@@ -30,18 +31,25 @@ const Counter = () => {
 
   const resetCounterHandler = () => {
     dispatch({ type: "RESET" });
+    
   };
 
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
-      {show && <div className={classes.value}>{counter}</div>}
+      {show && (
+        <div className={classes.value}>
+          {inputAmount !== isNaN ? counter : alert("Please enter a number.")}
+        </div>
+      )}
       <div>
         <button onClick={incrementCounterHandler}>Increment Counter</button>
         <button onClick={decrementCounterHandler}>Decrement Counter</button>
         <div>
-        <input onChange={increaseInputHandler} placeholder='Enter a Number'></input>
-        <button onClick={increaseCounterHandler}>Increase Counter by Input </button>
+          <input onChange={increaseInputHandler} placeholder="Inp"></input>
+          <button onClick={increaseCounterHandler}>
+            Increase Counter by {inputAmount}
+          </button>
         </div>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
