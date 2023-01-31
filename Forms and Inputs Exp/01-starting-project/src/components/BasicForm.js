@@ -1,20 +1,21 @@
 import useInput from "../hooks/use-input";
+import useEmailHook from "../hooks/use-email-input";
 
 const BasicForm = (props) => {
   const isNotEmpty = (value) => value.trim() !== "";
-  const isEmail = (value) => {value.includes("@")}
+  // const isEmail = (value) => {value.includes("@")}
   const {
     value: firstNameValue,
     isValid: firstNameIsValid,
     valueChangeHandler: firstNameChangeHandler,
-    hasError:firstNameHasError,
+    hasError: firstNameHasError,
     inputBlurHandler: firstNameBlurHandler,
     reset: firstNameResetHandler,
   } = useInput(isNotEmpty);
   const {
     value: lastNameValue,
     isValid: lastNameIsValid,
-    hasError:lastNameHasError,
+    hasError: lastNameHasError,
     valueChangeHandler: lastNameChangeHandler,
     inputBlurHandler: lastNameBlurHandler,
     reset: lastNameResetHandler,
@@ -22,19 +23,19 @@ const BasicForm = (props) => {
   const {
     value: emailValue,
     isValid: emailIsValid,
-    hasError:emailHasError,
-    valueChangeHandler: emailChangeHandler,
-    inputBlurHandler: emailBlurHandler,
-    reset: emailResetHandler,
-  } = useInput(isEmail);
+    hasError: emailHasError,
+    emailChangeHandler,
+    emailBlurHandler,
+    resetEmail: emailResetHandler,
+  } = useEmailHook(isNotEmpty);
 
-  const classFirstNameHandler = firstNameIsValid
+  const classFirstNameHandler = firstNameHasError
     ? "form-control invalid"
     : "form-control";
-  const classLastNameHandler = firstNameIsValid
+  const classLastNameHandler = lastNameHasError
     ? "form-control invalid"
     : "form-control";
-  const classEmailHandler = firstNameIsValid
+  const classEmailHandler = emailHasError
     ? "form-control invalid"
     : "form-control";
 
@@ -42,12 +43,23 @@ const BasicForm = (props) => {
   if (firstNameIsValid && lastNameIsValid && emailIsValid) {
     formIsValid = true;
   }
+
   const submitHandler = (e) => {
     e.preventDefault();
-    firstNameResetHandler('');
-    lastNameResetHandler('');
-    emailResetHandler('');
-    console.log(firstNameValue + " " + lastNameValue + " " + emailValue);
+    firstNameResetHandler();
+    lastNameResetHandler();
+    emailResetHandler();
+    console.log(
+      "FirstName:" +
+        firstNameValue +
+        " " +
+        "LastName:" +
+        lastNameValue +
+        " " +
+        "Email ID:" +
+        " " +
+        emailValue
+    );
   };
   return (
     <form onSubmit={submitHandler}>
@@ -69,7 +81,7 @@ const BasicForm = (props) => {
           <label htmlFor="name">Last Name</label>
           <input
             type="text"
-            id="name"
+            id="lastName"
             value={lastNameValue}
             onChange={lastNameChangeHandler}
             onBlur={lastNameBlurHandler}
@@ -79,7 +91,7 @@ const BasicForm = (props) => {
           )}
         </div>
         <div className={classEmailHandler}>
-          <label htmlFor="name">Email Address</label>
+          <label htmlFor="email">Email Address</label>
           <input
             type="email"
             id="email"
@@ -88,7 +100,7 @@ const BasicForm = (props) => {
             onBlur={emailBlurHandler}
           />
           {emailHasError && (
-            <p className="error-text"> Last Name cannot be Empty.</p>
+            <p className="error-text"> Email cannot be Empty.</p>
           )}
         </div>
         <div className="form-actions">

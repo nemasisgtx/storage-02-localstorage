@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import useInput from "../hooks/use-input";
-import EmailInputHook from "../hooks/email-use-input";
+import useEmailHook from "../hooks/use-email-input";
 
 const SimpleInput = (props) => {
   const {
@@ -19,7 +19,7 @@ const SimpleInput = (props) => {
     emailChangeHandler: emailChangedHandler,
     emailBlurHandler: inputBlurHandler,
     resetEmail: resetEmailInput,
-  } = EmailInputHook((value) => value.trim() !== "");
+  } = useEmailHook((value) => value.trim() !== "");
 
   // const [enteredName, setEnteredName] = useState("");
   // const [nameInputTouched, setNameInputIsTouched] = useState(false);
@@ -54,12 +54,12 @@ const SimpleInput = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+    resetNameInput();
+    resetEmailInput();
     // setValueIsTouched(true);
     // if (!enteredNameIsValid) {
     //   return;
     // }
-    resetNameInput();
-    resetEmailInput();
     // setEmailInputIsTouched(false);
   };
 

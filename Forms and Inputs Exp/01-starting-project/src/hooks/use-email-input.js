@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const EmailInputHook = (enteredValue) => {
+const useEmailHook = (enteredValue) => {
   const [enteredEmail, setEnteredEmail] = useState('');
   const [emailIsTouched, setEmailIsTouched] = useState(false);
 
@@ -27,4 +27,4 @@ const EmailInputHook = (enteredValue) => {
     resetEmail,
   };
 };
-export default EmailInputHook;
+export default useEmailHook;
