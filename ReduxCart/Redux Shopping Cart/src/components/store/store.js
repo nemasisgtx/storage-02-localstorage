@@ -4,6 +4,6 @@ import cartSlice from './cart-slice';
 
 
 const store = configureStore({
-  reducer: { ui: uiSlice.actions, cartCounter: cartSlice.actions}
+  reducer: { ui: uiSlice.reducer, cartCounter: cartSlice.reducer}
 });
 export default store;
