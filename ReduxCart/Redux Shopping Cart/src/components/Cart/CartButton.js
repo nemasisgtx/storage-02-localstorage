@@ -5,6 +5,7 @@ import {uiSliceActions} from '../store/ui-slice';
 const CartButton = (props) => {
   const cartQuantity = useSelector(state => state.cart.totalQuantity)
   const dispatch = useDispatch();
+  
   const toggleHandler = () => {
     dispatch(uiSliceActions.toggle())
   }
