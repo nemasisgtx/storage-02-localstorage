@@ -1,9 +1,13 @@
-import classes from './Auth.module.css';
-import { useState } from 'react';
+import classes from "./Auth.module.css";
+import { useState } from "react";
+import { authActions } from "../store/shop";
+import { useDispatch } from "react-redux";
 
 const Auth = () => {
-const [email , setEmail] = useState("");
-const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const emailHandler = (e) => {
     setEmail(e.target.value);
@@ -14,24 +18,35 @@ const [password, setPassword] = useState("");
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    console.log('form submitted');
+    dispatch(authActions.login());
+    console.log("form submitted");
     console.log(email, password);
-    setEmail('');
-    setPassword('');
+    setEmail("");
+    setPassword("");
   };
   return (
     <main className={classes.auth}>
       <section>
         <form onSubmit={formSubmitHandler}>
           <div className={classes.control}>
-            <label htmlFor='email'>Email</label>
-            <input value={email} onChange={emailHandler} type='email' id='email' />
+            <label htmlFor="email">Email</label>
+            <input
+              value={email}
+              onChange={emailHandler}
+              type="email"
+              id="email"
+            />
           </div>
           <div className={classes.control}>
-            <label htmlFor='password'>Password</label>
-            <input value={password} type='password' id='password' onChange={passwordHandler} />
+            <label htmlFor="password">Password</label>
+            <input
+              value={password}
+              type="password"
+              id="password"
+              onChange={passwordHandler}
+            />
           </div>
-          <button >Login</button>
+          <button>Login</button>
         </form>
       </section>
     </main>
@@ -39,38 +54,3 @@ const [password, setPassword] = useState("");
 };
 
 export default Auth;
-
-// import { useDispatch } from 'react-redux';
-
-// import classes from './Auth.module.css';
-// import { authActions } from '../store/auth';
-
-// const Auth = () => {
-//   const dispatch = useDispatch();
-
-//   const loginHandler = (event) => {
-//     event.preventDefault();
-
-//     dispatch(authActions.login());
-//   };
-
-//   return (
-//     <main className={classes.auth}>
-//       <section>
-//         <form onSubmit={loginHandler}>
-//           <div className={classes.control}>
-//             <label htmlFor='email'>Email</label>
-//             <input type='email' id='email' />
-//           </div>
-//           <div className={classes.control}>
-//             <label htmlFor='password'>Password</label>
-//             <input type='password' id='password' />
-//           </div>
-//           <button>Login</button>
-//         </form>
-//       </section>
-//     </main>
-//   );
-// };
-
-// export default Auth;
