@@ -3,7 +3,7 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 const initialCartCounterState = { counter: 0, showCounter: false };
 
 const cartCounterSlice = createSlice({
-  name: "cartCounterSlice",
+  name: "cartCounter",
   initialState: initialCartCounterState,
   reducers: {
     Increment: (state) => {
@@ -19,7 +19,7 @@ const cartCounterSlice = createSlice({
 });
 
 const store = configureStore({
-  reducer: { counter: cartCounterSlice.reducer },
+  reducer: { cartCounter: cartCounterSlice.reducer },
 });
 export const counterActions = cartCounterSlice.actions;
 export default store;
