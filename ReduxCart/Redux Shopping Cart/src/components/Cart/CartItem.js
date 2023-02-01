@@ -1,7 +1,19 @@
 import classes from './CartItem.module.css';
+import { counterActions } from '../Shop/store';
+import { useDispatch,useSelector } from 'react-redux';
 
 const CartItem = (props) => {
   const { title, quantity, total, price } = props.item;
+  const dispatch = useDispatch();
+  const counter = useSelector((state) => state.cartCounter.counter);
+  // const show = useSelector((state) => state.cartCounter.showCounter);
+  
+  const incrementCounterHandler = () => {
+    dispatch(counterActions.Increment());
+  };
+  const decrementCounterHandler = () => {
+    dispatch(counterActions.Decrement());
+  };
 
   return (
     <li className={classes.item}>
@@ -13,12 +25,12 @@ const CartItem = (props) => {
         </div>
       </header>
       <div className={classes.details}>
-        <div className={classes.quantity}>
+        {counter && (<div className={classes.quantity}>
           x <span>{quantity}</span>
-        </div>
+        </div>)}
         <div className={classes.actions}>
-          <button>-</button>
-          <button>+</button>
+          <button onClick={incrementCounterHandler}>+</button>
+          <button onClick={decrementCounterHandler}>-</button>
         </div>
       </div>
     </li>
