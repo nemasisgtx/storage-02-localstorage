@@ -1,7 +1,7 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 
+// Added Counter Slice in Store(shop)
 const initialCounterState = { counter: 0, showCounter: true };
-// let counterState = state.counter;
 const counterSlice = createSlice({
   name: "counter",
   initialState: initialCounterState,
@@ -24,30 +24,7 @@ const counterSlice = createSlice({
   },
 });
 
-// const counterReducer = (state = initialState, action) => {
-//   let counterState = state.counter;
-//   switch (action.type) {
-//     case "INCREMENT":
-//       return { counter: counterState + 1, showCounter: state.showCounter };
-//     case "DECREMENT":
-//       return { counter: counterState - 1, showCounter: state.showCounter };
-//     case "TOGGLE":
-//       return { counter: counterState, showCounter: !state.showCounter };
-//     case "RESET":
-//       return {
-//         counter: (counterState = initialState.counter),
-//         showCounter: state.showCounter,
-//       };
-//     case "INCREASE":
-//       return {
-//         counter: counterState + parseInt(action.amount),
-//         showCounter: state.showCounter,
-//       };
-//     default:
-//       return state;
-//   }
-// };
-
+// Added Auth Slice in Store(shop)
 const initialAuthState = { isAuthenticated: false };
 const authSlice = createSlice({
   name: "authentication",
