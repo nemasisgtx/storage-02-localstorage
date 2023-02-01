@@ -25,6 +25,7 @@ export const counterActions = counterSlice.actions;
 
 export default counterSlice.reducer;
 
+// OLD_METHOD using REACT_REDUX
 // const counterReducer = (state = initialState, action) => {
 //   let counterState = state.counter;
 //   switch (action.type) {
