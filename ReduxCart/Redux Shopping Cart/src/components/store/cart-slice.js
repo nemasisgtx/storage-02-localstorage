@@ -1,4 +1,4 @@
-import { createSlice, configureStore } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialCartCounterState = { counter: 0, showCounter: false };
 
@@ -18,8 +18,6 @@ const cartCounterSlice = createSlice({
   },
 });
 
-const store = configureStore({
-  reducer: { cartCounter: cartCounterSlice.reducer },
-});
 export const counterActions = cartCounterSlice.actions;
-export default store;
+export default cartCounterSlice;
+
