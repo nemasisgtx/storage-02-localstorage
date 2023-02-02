@@ -3,7 +3,7 @@ import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import { useSelector, useDispatch } from "react-redux";
 import { Fragment, useEffect } from "react";
-import { sendCartData } from "./components/store/cart-api-thunk";
+import { sendCartData, fetchCartData } from "./components/store/cart-api-thunk";
 import Notification from "./components/UI/Notification";
 
 let isInitialized = true;
@@ -13,13 +13,21 @@ function App() {
   const showCart = useSelector((state) => state.ui.cartIsVisible);
   const cart = useSelector((state) => state.cart);
   const notification = useSelector((state) => state.ui.notification);
+
+  useEffect(() => {
+    dispatch(fetchCartData());
+  }, [dispatch]);
+
   useEffect(() => {
     if (isInitialized) {
       isInitialized = false;
       return;
+    } 
+    
+    if (cart.changed) {
+      dispatch(sendCartData(cart));
     }
 
-    dispatch(sendCartData(cart));
   }, [cart, dispatch]);
 
   return (
