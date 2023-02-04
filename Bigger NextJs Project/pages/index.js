@@ -3,7 +3,7 @@
 import MeetupList from '../components/meetups/MeetupList';
 const DUMMY_MEETUPS = [
   {
-    id: 1,
+    id: 'm1',
     title: 'Meetup 1',
     image:
       'https://upload.wikimedia.org/wikipedia/commons/f/f8/Roman_Baths%2C_Bath%2C_2017.jpg',
@@ -11,7 +11,7 @@ const DUMMY_MEETUPS = [
     description: 'Meetup 1 Image by Alix Clinkingbeard',
   },
   {
-    id: 2,
+    id: 'm2',
     title: 'Meetup 2',
     image:
       'https://upload.wikimedia.org/wikipedia/commons/1/1c/HER_Museum_6_July_2018_Petuaria_2.jpg',
@@ -20,7 +20,7 @@ const DUMMY_MEETUPS = [
       'Part of a reconstruction of Peturia, the former Roman settlement near Brough, in the Hull and East Riding Museum, Meetup 2 Image by a Chemcial Engineer',
   },
   {
-    id: 3,
+    id: 'm3',
     title: 'Meetup 3',
     image:
       'https://upload.wikimedia.org/wikipedia/commons/4/47/Gateway_to_Caer_Beris_-_geograph.org.uk_-_1042227.jpg',
@@ -28,7 +28,7 @@ const DUMMY_MEETUPS = [
     description: 'Meetup 3 Image by Phil Jones',
   },
   {
-    id: 4,
+    id: 'm4',
     title: 'Meetup 4',
     image:
       'https://upload.wikimedia.org/wikipedia/commons/1/15/Canterbury_-_Castle01.jpg',

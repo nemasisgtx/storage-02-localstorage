@@ -1,5 +1,5 @@
-
 import MeetupDetail from '../../components/meetups/MeetupDetail';
+
 const MeetupDetails = (props) => {
   return (
     <MeetupDetail
@@ -10,4 +10,46 @@ const MeetupDetails = (props) => {
     />
   );
 };
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {
+        params: { meetupId: 'm1' },
+      },
+      {
+        params: { meetupId: 'm2' },
+      },
+      {
+        params: { meetupId: 'm3' },
+      },
+      {
+        params: { meetupId: 'm4' },
+      },
+    ],
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(context) {
+  //fetch data for a single meetup
+
+  const meetupId = context.params.meetupId;
+
+  console.log(meetupId);
+
+  return {
+    props: {
+      meetupData: {
+        id: meetupId,
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/f/f8/Roman_Baths%2C_Bath%2C_2017.jpg',
+        title: 'First Meetup',
+        address: 'Somewhere in Rome',
+        description: 'This is my first meetup.',
+      },
+    },
+  };
+}
+
 export default MeetupDetails;
