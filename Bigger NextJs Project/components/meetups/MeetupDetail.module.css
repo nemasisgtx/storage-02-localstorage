@@ -1,5 +1,11 @@
 .detail {
     text-align: center;
+    display: flex;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 .detail title{
     text-align: center;
