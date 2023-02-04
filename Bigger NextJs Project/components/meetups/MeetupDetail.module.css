@@ -1,0 +1,18 @@
+.detail {
+    text-align: center;
+}
+.detail title{
+    text-align: center;
+    font-style:italic;
+}
+.detail address{
+    font-size: larger;
+}
+.detail p{
+    font-size:medium;
+}
+
+.detail img{
+width: 100%;
+height: auto;
+}
