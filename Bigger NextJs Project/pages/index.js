@@ -49,10 +49,10 @@ const Homepage = (props) => {
   return (
     <>
       <Head>
-        <title>React Meetups</title>
+        <title>Roman Meetups</title>
         <meta
           name="description"
-          content="Browse a Huge content of React Meetups!"
+          content="Browse a Huge content of Roman Meetups!"
         />
       </Head>
       <MeetupList meetups={props.meetups} />;
