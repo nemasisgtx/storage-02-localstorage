@@ -1,52 +1,64 @@
+import { MongoClient, ObjectId } from 'mongodb';
+
 import MeetupDetail from '../../components/meetups/MeetupDetail';
 
-const MeetupDetails = (props) => {
+function MeetupDetails(props) {
   return (
     <MeetupDetail
-      image="https://upload.wikimedia.org/wikipedia/commons/f/f8/Roman_Baths%2C_Bath%2C_2017.jpg"
-      title="First Meetup"
-      address="Somewhere in Rome"
-      description="This is my first meetup."
+      image={props.meetupData.image}
+      title={props.meetupData.title}
+      address={props.meetupData.address}
+      description={props.meetupData.description}
     />
   );
-};
+}
 
 export async function getStaticPaths() {
+  const client = await MongoClient.connect(
+    'mongodb+srv://retroTechdev:Veo1g1E8m76UGQDQ@cluster0.rnedgjz.mongodb.net/meetups?retryWrites=true&w=majority'
+  );
+  const db = client.db();
+
+  const meetupsCollection = db.collection('meetups');
+
+  const meetups = await meetupsCollection.find({}, { _id: 1 }).toArray();
+
+  client.close();
+
   return {
-    paths: [
-      {
-        params: { meetupId: 'm1' },
-      },
-      {
-        params: { meetupId: 'm2' },
-      },
-      {
-        params: { meetupId: 'm3' },
-      },
-      {
-        params: { meetupId: 'm4' },
-      },
-    ],
     fallback: false,
+    paths: meetups.map((meetup) => ({
+      params: { meetupId: meetup._id.toString() },
+    })),
   };
 }
 
 export async function getStaticProps(context) {
-  //fetch data for a single meetup
+  // fetch data for a single meetup
 
   const meetupId = context.params.meetupId;
 
-  console.log(meetupId);
+  const client = await MongoClient.connect(
+    'mongodb+srv://retroTechdev:Veo1g1E8m76UGQDQ@cluster0.rnedgjz.mongodb.net/meetups?retryWrites=true&w=majority'
+  );
+  const db = client.db();
+
+  const meetupsCollection = db.collection('meetups');
+
+  const selectedMeetup = await meetupsCollection.findOne({
+    _id: ObjectId(meetupId),
+  });
+
+  client.close();
 
   return {
     props: {
       meetupData: {
-        id: meetupId,
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/f/f8/Roman_Baths%2C_Bath%2C_2017.jpg',
-        title: 'First Meetup',
-        address: 'Somewhere in Rome',
-        description: 'This is my first meetup.',
+        id: selectedMeetup._id.toString(),
+        title: selectedMeetup.title,
+        address: selectedMeetup.address,
+        image: selectedMeetup.image,
+        description: selectedMeetup.description,
       },
     },
   };
