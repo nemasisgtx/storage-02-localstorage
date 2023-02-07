@@ -1,5 +1,5 @@
-import MeetupItem from './MeetupItem';
-import classes from './MeetupList.module.css';
+import MeetupItem from './NewsItem';
+import classes from './NewsList.module.css';
 
 function MeetupList(props) {
   return (

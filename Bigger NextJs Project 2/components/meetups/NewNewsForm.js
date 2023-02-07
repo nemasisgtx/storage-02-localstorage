@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 
 import Card from '../ui/Card';
-import classes from './NewMeetupForm.module.css';
+import classes from './NewNewsForm.module.css';
 
-function NewMeetupForm(props) {
+function NewNewsForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
-  const addressInputRef = useRef();
+  const sourceInputRef = useRef();
   const descriptionInputRef = useRef();
 
   function submitHandler(event) {
@@ -14,33 +14,33 @@ function NewMeetupForm(props) {
 
     const enteredTitle = titleInputRef.current.value;
     const enteredImage = imageInputRef.current.value;
-    const enteredAddress = addressInputRef.current.value;
+    const enteredSource = sourceInputRef.current.value;
     const enteredDescription = descriptionInputRef.current.value;
 
-    const meetupData = {
+    const NewsData = {
       title: enteredTitle,
       image: enteredImage,
-      address: enteredAddress,
+      source: enteredSource,
       description: enteredDescription,
     };
 
-    props.onAddMeetup(meetupData);
+    props.onAddNews(NewsData);
   }
 
   return (
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor='title'>Meetup Title</label>
+          <label htmlFor='title'>News Title</label>
           <input type='text' required id='title' ref={titleInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='image'>Meetup Image</label>
+          <label htmlFor='image'>News Image</label>
           <input type='url' required id='image' ref={imageInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='address'>Address</label>
-          <input type='text' required id='address' ref={addressInputRef} />
+          <label htmlFor='source'>Source</label>
+          <input type='text' required id='source' ref={sourceInputRef} />
         </div>
         <div className={classes.control}>
           <label htmlFor='description'>Description</label>
@@ -52,11 +52,11 @@ function NewMeetupForm(props) {
           ></textarea>
         </div>
         <div className={classes.actions}>
-          <button>Add Meetup</button>
+          <button>Add News</button>
         </div>
       </form>
     </Card>
   );
 }
 
-export default NewMeetupForm;
+export default NewNewsForm;
