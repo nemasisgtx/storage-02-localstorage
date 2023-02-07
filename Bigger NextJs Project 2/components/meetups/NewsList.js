@@ -1,11 +1,11 @@
-import MeetupItem from './NewsItem';
+import NewsItem from './NewsItem';
 import classes from './NewsList.module.css';
 
-function MeetupList(props) {
+function NewsList(props) {
   return (
     <ul className={classes.list}>
       {props.meetups.map((meetup) => (
-        <MeetupItem
+        <NewsItem
           key={meetup.id}
           id={meetup.id}
           image={meetup.image}
@@ -17,4 +17,4 @@ function MeetupList(props) {
   );
 }
 
-export default MeetupList;
+export default NewsList;
