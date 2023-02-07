@@ -28,8 +28,8 @@ const Homepage = () => {
   return (
     <>
       <Layout>
-        <MeetupList meetups={DUMMY_NEWS} />
         <h1>This is the HomePage.</h1>
+        <MeetupList meetups={DUMMY_NEWS} />
         <Link href="/news/newsPage"></Link>
       </Layout>
     </>
