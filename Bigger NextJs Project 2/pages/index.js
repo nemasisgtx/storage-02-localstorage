@@ -29,7 +29,7 @@ const Homepage = () => {
     <>
       <Layout>
         <MeetupList meetups={DUMMY_NEWS} />
-        <h1>This is the home page.</h1>
+        <h1>This is the HomePage.</h1>
         <Link href="/news/newsPage"></Link>
       </Layout>
     </>
