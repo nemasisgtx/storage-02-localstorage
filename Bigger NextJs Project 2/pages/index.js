@@ -1,5 +1,5 @@
 // our-domain/
-import NewsList from "../components/meetups/NewsList";
+import NewsList from "../components/newsdata/NewsList";
 
 const Homepage = () => {
   const DUMMY_NEWS = [

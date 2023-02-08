@@ -1,8 +1,13 @@
 import Card from "../ui/Card";
+import { useRouter } from "next/router";
 import classes from "./NewsItem.module.css";
-import Link from "next/link";
+// import Link from "next/link";
 
 function NewsItem(props) {
+  const router = useRouter();
+  const showDetailsHandler = (event) => {
+    router.push('/' + props.id);
+  };
   return (
     <li className={classes.item}>
       <Card>
@@ -14,9 +19,9 @@ function NewsItem(props) {
           <address>{props.address}</address>
         </div>
         <div className={classes.actions}>
-          <Link href="/showDetails">
-            <button>Show Details</button>
-          </Link>
+          {/* <Link href="/showDetails"> */}
+            <button onClick={showDetailsHandler}>Show Details</button>
+          {/* </Link> */}
         </div>
       </Card>
     </li>
