@@ -1,5 +1,6 @@
-import Card from '../ui/Card';
-import classes from './NewsItem.module.css';
+import Card from "../ui/Card";
+import classes from "./NewsItem.module.css";
+import Link from "next/link";
 
 function NewsItem(props) {
   return (
@@ -13,7 +14,9 @@ function NewsItem(props) {
           <address>{props.address}</address>
         </div>
         <div className={classes.actions}>
-          <button>Show Details</button>
+          <Link href="/showDetails">
+            <button>Show Details</button>
+          </Link>
         </div>
       </Card>
     </li>

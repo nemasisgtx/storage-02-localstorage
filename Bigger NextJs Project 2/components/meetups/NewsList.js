@@ -4,13 +4,13 @@ import classes from './NewsList.module.css';
 function NewsList(props) {
   return (
     <ul className={classes.list}>
-      {props.meetups.map((meetup) => (
+      {props.newses.map((news) => (
         <NewsItem
-          key={meetup.id}
-          id={meetup.id}
-          image={meetup.image}
-          title={meetup.title}
-          address={meetup.address}
+          key={news.id}
+          id={news.id}
+          image={news.image}
+          title={news.title}
+          address={news.address}
         />
       ))}
     </ul>
