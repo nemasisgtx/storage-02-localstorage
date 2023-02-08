@@ -1,0 +1,15 @@
+.detail {
+  text-align: center;
+}
+.detail img {
+  width: 100%;
+}
+.source {
+  font-size: large;
+}
+.detail p {
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-stretch: expanded;
+}

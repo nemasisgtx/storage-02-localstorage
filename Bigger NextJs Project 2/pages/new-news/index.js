@@ -1,5 +1,5 @@
 // our-domain.com/new-news
-import NewNewsForm from "../../components/meetups/NewNewsForm";
+import NewNewsForm from "../../components/newsData/NewNewsForm";
 
 const AddNewNews = () => {
   const addNewsHandler = (enteredNewsData) => {
