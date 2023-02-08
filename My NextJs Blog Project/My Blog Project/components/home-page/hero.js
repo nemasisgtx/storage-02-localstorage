@@ -1,14 +1,20 @@
-import Image from "next/image";
-import classes from "./hero.module.css";
-import pf from "../../public/images/site/pf.jpg"
+import Image from 'next/image';
+import classes from './hero.module.css';
 
 const Hero = () => {
   return (
     <section className={classes.hero}>
-      <div className={classes.image}></div>
-      <Image src={pf} alt="Profile Pic" width={300} height={300} />
-      <h1>Hello TechDev</h1>
-      <p>I am a React Developer.</p>
+      <div className={classes.image}>
+        <Image
+          src="/images/site/pf.jpg"
+          // fill='intrusive'
+          alt="Profile Pic"
+          width={500}
+          height={500}
+        />
+      </div>
+      <h1>Hello, I'm Ash</h1>
+      <p>I am a JavaScript Developer mostly working on ReactJs.</p>
     </section>
   );
 };
