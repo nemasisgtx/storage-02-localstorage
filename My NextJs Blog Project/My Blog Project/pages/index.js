@@ -43,7 +43,7 @@ function HomePage(props) {
         />
       </Head> */}
       <Hero />
-      <FeaturedPosts posts={DUMMY_POSTS} />
+      <FeaturedPosts dummy={DUMMY_POSTS} />
     </Fragment>
   );
 }
