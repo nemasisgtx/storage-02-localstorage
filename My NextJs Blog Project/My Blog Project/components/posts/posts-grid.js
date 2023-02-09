@@ -5,7 +5,8 @@ function PostsGrid(props) {
   const { posts } = props;
 
   return (
-    <ul className={classes.grid}>
+    <ul className={classes.grid}>       
+    {/* Map Function not working */}
       {posts.map((post) => {
         <PostItem key={post.slug} post={post} />;
       })}
