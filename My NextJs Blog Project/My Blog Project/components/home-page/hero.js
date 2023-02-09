@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import classes from './hero.module.css';
+import Image from "next/image";
+import classes from "./hero.module.css";
 
 const Hero = () => {
   return (
@@ -14,7 +14,10 @@ const Hero = () => {
         />
       </div>
       <h1>Hello, I'm Ash</h1>
-      <p>I am a JavaScript Developer mostly working on ReactJs.</p>
+      <p>
+        I am a JavaScript Developer currently working with frontend frameworks
+        like ReactJs or AngularJs.
+      </p>
     </section>
   );
 };
