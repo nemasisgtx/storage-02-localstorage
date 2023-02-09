@@ -5,11 +5,14 @@ import classes from './main-navigation.module.css';
 const MainNavigation = () => {
   return (
     <header className={classes.header}>
-      <Logo />
+      <Link href="/"><Logo /></Link>
       <nav>
         <ul className={classes.ul}>
           <li>
             <Link href="/posts">Posts</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact Page</Link>
           </li>
         </ul>
       </nav>
