@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FeaturedPosts from "./featured-posts";
+// import FeaturedPosts from "./featured-posts";
 import classes from "./hero.module.css";
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
         I am a JavaScript Developer currently working with frontend frameworks
         like ReactJs or AngularJs.
       </p>
-    <FeaturedPosts></FeaturedPosts>
+    {/* <FeaturedPosts></FeaturedPosts> */}
     </section>
   );
 };

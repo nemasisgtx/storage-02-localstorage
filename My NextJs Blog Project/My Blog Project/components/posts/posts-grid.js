@@ -8,7 +8,7 @@ function PostsGrid(props) {
     <ul className={classes.grid}>
       {/* Map Function not working without a conditional statement*/}
       {posts?.map((post) => {
-        <PostItem key={posts.slug} post={post} />;
+        <PostItem key={post.slug} post={posts} />;
       })}
     </ul>
   );
